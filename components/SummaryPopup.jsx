@@ -10,11 +10,6 @@ const SummaryPopup = () => {
 
   return (
     <div style={{ position: "relative", minHeight: "100vh", backgroundColor: "#F8F8F8" }}>
-      {/* Main Content */}
-      <div style={{ padding: "16px", maxWidth: "700px", margin: "0 auto" }}>
-        {/* Your content here */}
-      </div>
-
       {/* Fixed Bottom Summary Button */}
       <div
         style={{
@@ -22,29 +17,21 @@ const SummaryPopup = () => {
           bottom: 0,
           width: "100%",
           maxWidth: "700px",
-          left: "calc(50% - 350px)", // Center align the box
+          left: "50%",
+          transform: "translateX(-50%)",
           backgroundColor: "#FFFFFF",
           boxShadow: "0px -2px 6px rgba(0, 0, 0, 0.1)",
           borderRadius: "16px 16px 0 0",
           padding: "12px 16px",
           display: "flex",
           alignItems: "center",
-          justifyContent: "space-between", // Align text and arrow on far ends
+          justifyContent: "space-between",
           zIndex: 10,
           cursor: "pointer",
         }}
         onClick={toggleSummary}
       >
-        <p
-          style={{
-            fontSize: "16px",
-            fontWeight: "600",
-            color: "#212121",
-            margin: 0,
-          }}
-        >
-          Summary
-        </p>
+        <p style={{ fontSize: "16px", fontWeight: "600", color: "#212121", margin: 0 }}>Summary</p>
         <span
           style={{
             fontSize: "16px",
@@ -67,8 +54,9 @@ const SummaryPopup = () => {
             position: "fixed",
             bottom: 0,
             width: "100%",
-            maxWidth: "700px",
-            left: "calc(50% - 350px)", // Align the popup with the summary button
+            maxWidth: "400px",
+            left: "30%",
+            transform: "translateX(-50%)",
             backgroundColor: "#FFFFFF",
             boxShadow: "0px -2px 10px rgba(0, 0, 0, 0.1)",
             borderRadius: "16px 16px 0 0",
@@ -91,16 +79,16 @@ const SummaryPopup = () => {
                 fontSize: "18px",
                 color: "#9E9E9E",
                 cursor: "pointer",
+                
               }}
               onClick={toggleSummary}
             >
-              ▼{/* Arrow for closing */}
+              ▼
             </span>
           </div>
 
-          {/* Summary Items */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-            {/* Goal */}
+           {/* Summary Items */}
+           <div style={{ display: "flex", flexDirection: "column", gap: "16px"  }} >
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                 <span
@@ -112,7 +100,9 @@ const SummaryPopup = () => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    color:"white",
+                    color: "white",
+                   
+                   
                   }}
                 >
                   ✓
@@ -141,31 +131,30 @@ const SummaryPopup = () => {
                 </div>
               </div>
               <button
-  style={{
-    backgroundColor: "#FFFFFF", // White background
-    border: "2px solid #FFC107", // Yellow border
-    borderRadius: "4px", // Slightly rounded corners
-    width: "24px", // Square box
-    height: "24px", // Square box
-    display: "flex", // To center-align the icon
-    justifyContent: "center",
-    alignItems: "center",
-    cursor: "pointer", // Pointer cursor on hover
-    boxShadow: "0px 1px 4px rgba(0, 0, 0, 0.1)", // Subtle shadow
-  }}
-  onClick={() => alert("Edit clicked!")} // Example click action
->
-  <span
-    style={{
-      fontSize: "14px", // Adjust icon size
-      color: "#FFC107", // Yellow color for the icon
-      fontWeight: "700", // Bold for better visibility
-    }}
-  >
-      ✎ {/* Pencil icon moved to the right */}
-  </span>
-</button>
-
+                style={{
+                  backgroundColor: "#FFFFFF",
+                  border: "2px solid #FFC107",
+                  borderRadius: "4px",
+                  width: "24px",
+                  height: "24px",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  cursor: "pointer",
+                  boxShadow: "0px 1px 4px rgba(0, 0, 0, 0.1)",
+                }}
+                onClick={() => alert("Edit clicked!")}
+              >
+                <span
+                  style={{
+                    fontSize: "14px",
+                    color: "#FFC107",
+                    fontWeight: "700",
+                  }}
+                >
+                  ✎
+                </span>
+              </button>
             </div>
 
             {/* Gender */}
@@ -180,7 +169,7 @@ const SummaryPopup = () => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    color:"white",
+                    color: "white",
                   }}
                 >
                   ✓
@@ -209,35 +198,34 @@ const SummaryPopup = () => {
                 </div>
               </div>
               <button
-  style={{
-    backgroundColor: "#FFFFFF", // White background
-    border: "2px solid #FFC107", // Yellow border
-    borderRadius: "4px", // Slightly rounded corners
-    width: "24px", // Square box
-    height: "24px", // Square box
-    display: "flex", // To center-align the icon
-    justifyContent: "center",
-    alignItems: "center",
-    cursor: "pointer", // Pointer cursor on hover
-    boxShadow: "0px 1px 4px rgba(0, 0, 0, 0.1)", // Subtle shadow
-  }}
-  onClick={() => alert("Edit clicked!")} // Example click action
->
-  <span
-    style={{
-      fontSize: "14px", // Adjust icon size
-      color: "#FFC107", // Yellow color for the icon
-      fontWeight: "700", // Bold for better visibility
-    }}
-  >
-      ✎ {/* Pencil icon moved to the right */}
-  </span>
-</button>
+                style={{
+                  backgroundColor: "#FFFFFF",
+                  border: "2px solid #FFC107",
+                  borderRadius: "4px",
+                  width: "24px",
+                  height: "24px",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  cursor: "pointer",
+                  boxShadow: "0px 1px 4px rgba(0, 0, 0, 0.1)",
+                }}
+                onClick={() => alert("Edit clicked!")}
+              >
+                <span
+                  style={{
+                    fontSize: "14px",
+                    color: "#FFC107",
+                    fontWeight: "700",
+                  }}
+                >
+                  ✎
+                </span>
+              </button>
             </div>
 
             {/* BMI */}
             <div>
-            
               <input
                 type="text"
                 placeholder="BMI"
@@ -248,16 +236,64 @@ const SummaryPopup = () => {
                   borderRadius: "8px",
                   fontSize: "14px",
                   color: "#212121",
-                  textAlign:"center"
+                  textAlign: "center",
                 }}
               />
             </div>
           </div>
         </motion.div>
       )}
+
+      {/* Responsive Styles */}
+      <style>
+      {`
+       
+       <style>
+  @media only screen and (max-width: 480px) {
+    /* Extra Small Devices (Mobile Portrait) */
+    .summary-popup {
+      left: 50%;
+      transform: translateX(-50%);
+      width: 95%;
+      max-width: 400px;
+    }
+  }
+
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    /* Small Devices (Mobile Landscape & Small Tablets) */
+    .summary-popup {
+      left: 70%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 400px;
+    }
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Medium Devices (Tablets & Smaller Desktops) */
+    .summary-popup {
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      max-width: 500px;
+    }
+  }
+
+  @media only screen and (min-width: 1025px) {
+    /* Large Devices (Laptops & Desktops) */
+    .summary-popup {
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70%;
+      max-width: 600px;
+    }
+  }
+</style>
+
+        `}
+      </style>
     </div>
   );
 };
 
 export default SummaryPopup;
-
