@@ -55,7 +55,7 @@ const SummaryPopup = () => {
             bottom: 0,
             width: "100%",
             maxWidth: "400px",
-            left: "30%",
+            left: "50%",
             transform: "translateX(-50%)",
             backgroundColor: "#FFFFFF",
             boxShadow: "0px -2px 10px rgba(0, 0, 0, 0.1)",
@@ -252,7 +252,7 @@ const SummaryPopup = () => {
   @media only screen and (max-width: 480px) {
     /* Extra Small Devices (Mobile Portrait) */
     .summary-popup {
-      left: 50%;
+    left: "10%",
       transform: translateX(-50%);
       width: 95%;
       max-width: 400px;
@@ -262,7 +262,7 @@ const SummaryPopup = () => {
   @media only screen and (min-width: 481px) and (max-width: 768px) {
     /* Small Devices (Mobile Landscape & Small Tablets) */
     .summary-popup {
-      left: 70%;
+       left: "10%",
       transform: translateX(-50%);
       width: 90%;
       max-width: 400px;
@@ -272,7 +272,7 @@ const SummaryPopup = () => {
   @media only screen and (min-width: 769px) and (max-width: 1024px) {
     /* Medium Devices (Tablets & Smaller Desktops) */
     .summary-popup {
-      left: 50%;
+        left: "10%",
       transform: translateX(-50%);
       width: 80%;
       max-width: 500px;
@@ -282,7 +282,7 @@ const SummaryPopup = () => {
   @media only screen and (min-width: 1025px) {
     /* Large Devices (Laptops & Desktops) */
     .summary-popup {
-      left: 50%;
+       left: "10%",
       transform: translateX(-50%);
       width: 70%;
       max-width: 600px;
